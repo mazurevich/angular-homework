@@ -1,0 +1,13 @@
+<div class='row'>
+  <div class='col-xs-8'></div>
+  <div class='col-xs-4 text-right'>
+    <span *ngIf="cart.getProducts().length === 0">Cart is empty</span>
+    <div *ngIf="cart.getProducts().length > 0">
+      <p>You will buy: </p>
+      <ul>
+        <li *ngFor="let product of cart.getProducts()">{{product}}</li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-warning" (click)="onClear()">Clear</button>
+  </div>
+</div>

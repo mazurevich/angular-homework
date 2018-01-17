@@ -1,0 +1,20 @@
+<td>{{product.name}}</td>
+<td>
+  {{product.description}}<br/>
+  {{product.category}}<br/>
+  {{product.isAvailable ? 'available': 'not available'}}<br/>
+</td>
+<td>
+  <ul>
+    <li *ngFor="let ingredient of product.ingredients">{{ingredient}}</li>
+  </ul>
+</td>
+<td>
+  <ul>
+    <li *ngFor="let equivalent of product.equivalents">{{equivalent}}</li>
+  </ul>
+</td>
+
+<td>{{product.price}}</td>
+<td><button type="button" class="btn btn-primary" (click)="onBuy()">Buy</button></td>
+
